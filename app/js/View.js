@@ -1,104 +1,96 @@
 $( document ).ready(function() {
-  var handle = 11;
-  var pocket = 3;
-  var hotel = 1;
+  var handle = 11;//chart data
+  var pocket = 3; //chart data
+  var hotel = 1;  //chart data
 
-  var likes = 131;
-  var twits = 14;
-  $('#11').append(handle);
-  $('#3').append(pocket);
-  $('#1').append(hotel);
-  $('#15').append(hotel+pocket+handle);
+  var likes = 131;//likes count
+  var twits = 14; //twits count
 
-    $('.likescore').append(likes);
-    $('.twitscore').append(twits);
-  $(function(){
+  var liked = false;//like flag
+  var twited = false;//twit flag
 
-      var canvas=document.getElementById("cgistogram");
-      var ctx=canvas.getContext("2d");
+  $('#11').append(handle); //filling a services column
+  $('#3').append(pocket); //filling a services column
+  $('#1').append(hotel);  //filling a services column
+  $('#15').append(hotel+pocket+handle); //filling a services column
 
-      var canvasOffset=$("#cgistogram").offset();
-      var offsetX=canvasOffset.left;
-      var offsetY=canvasOffset.top;
+  $('.likescore').append(likes);  //filling a likes counter
+  $('.twitscore').append(twits);  //filling a twits counter
+  $(function(){ //chart drawing
+      var canvas=document.getElementById("cgistogram"); //chart keeping
+      var ctx=canvas.getContext("2d");  //some configuration
 
-      var barHeight=22;
-      var barSpacing=10;
-      var leftMargin=0;
-      var bars=[]
+      var canvasOffset=$("#cgistogram").offset(); //global coordinates
+      var offsetX=canvasOffset.left;  //offset of X coordinate
+      var offsetY=canvasOffset.top;   //offset of Y coordinate
 
-      bars.push({width:handle * 28, color:"#b1e19b", x:null,y:null,left:null,bottom:null});
-      bars.push({width:pocket * 22, color:"#ace2f8", x:null,y:null,left:null,bottom:null});
-      bars.push({width:hotel * 44, color:"#ace2f8", x:null,y:null,left:null,bottom:null});
+      var barHeight=22; //the width of bar(in horizontal it feels like height)
+      var barSpacing=10;//the space between bars
+      var bars=[] //a settings container in future
 
+      bars.push({width:handle * 28, color:"#b1e19b", x:null,y:null,left:null}); //set for first bar
+      bars.push({width:pocket * 22, color:"#ace2f8", x:null,y:null,left:null}); //set for second bar
+      bars.push({width:hotel * 44, color:"#ace2f8", x:null,y:null,left:null}); //set for third bar
 
-      for(var i=0;i<bars.length;i++){
+      for(var i=0;i<bars.length;i++){ //use sets
           bar=bars[i];
-          bar.y=leftMargin+(barHeight+barSpacing)*i;
-          bar.x=bar.width;
-          bar.height=barHeight;
-          bar.left=bar.y+barHeight;
-          bar.bottom=canvas.height;
+          bar.y=(barHeight+barSpacing)*i; //setting y coordina for lower angle
+          bar.x=bar.width;  //setting x coordinate for righter angle
+          bar.height=barHeight; //setting a height(width)
+          bar.left=bar.y+barHeight;//setting y for upper angle
       }
-
       drawBarchart();
 
       function drawBarchart(){
+          ctx.clearRect(0,0,canvas.width,canvas.height);  //clear a field for draw
+          ctx.rect(0,0,canvas.width,canvas.height); //seting a shape of draw
+          ctx.fillStyle="transparent";  //making a transparent background
+          ctx.fill(); //releas background
 
-          ctx.clearRect(0,0,canvas.width,canvas.height);
-          ctx.rect(0,0,canvas.width,canvas.height);
-          ctx.fillStyle="transparent";
-          ctx.fill();
-
-          for(var i=0;i<bars.length;i++){
-              bar=bars[i];
-              ctx.beginPath();
-              ctx.rect(0,bar.y + 5,bar.x,bar.height);
-              ctx.fillStyle=bar.color;
-            ctx.fill();
-              ctx.strokeStyle = bar.color;
-              ctx.lineJoin = 'round';
-              ctx.lineWidth = 8;
-              ctx.stroke();
+          for(var i=0;i<bars.length;i++){ //rectangle drawing
+              bar=bars[i];  //setting current bar
+              ctx.beginPath();  //start linear drawing
+              ctx.rect(0,bar.y + 5,bar.x,bar.height);  //draw a rectangle frame
+              ctx.fillStyle=bar.color;  //set a color for current bar
+              ctx.fill(); //release filling
+              ctx.strokeStyle = bar.color;  //set the color of stroke
+              ctx.lineJoin = 'round'; //a rounding of angles
+              ctx.lineWidth = 8;  //set a width of stroke
+              ctx.stroke(); //release stroke
           }
-
-
-          ctx.fillStyle = "#000000";
-          ctx.font = " 18px Arial";
-          ctx.fillText("Ручное бронирование", 10,22);
-          ctx.fillText("Пакетные туры", 10,54);
-          ctx.fillText("Отели", 10,85);
-
+          ctx.fillStyle = "#000000";  //set a font colour
+          ctx.font = " 18px Arial"; //set a font
+          ctx.fillText("Ручное бронирование", 10,22); //describing a first bar
+          ctx.fillText("Пакетные туры", 10,54);//describing a second bar
+          ctx.fillText("Отели", 10,85);//describing a third bar
       }
   });
-  var liked = false;
-  var twited = false;
 
-  $('#hearts').on('click',function(){
-    liked = !liked;
+  $('#hearts').on('click',function(){ //setting dynamic likes
+    liked = !liked; //change a flag
     if(liked) {
-      likes++;
-      $('#hearts').css( 'color' , 'salmon' );
+      likes++;  //likes rising
+      $('#hearts').css( 'color' , 'salmon' ); //changing colour
     }
     else {
-      likes--;
-      $('#hearts').css( 'color' , '#6fadce' );
+      likes--;  //like falling
+      $('#hearts').css( 'color' , '#6fadce' );  //changing colour back
     }
-    $('.likescore').empty();
-    $('.likescore').append(likes);
+    $('.likescore').empty();  //clear old likes
+    $('.likescore').append(likes);  //set new likes
   });
 
-  $('#clouds').on('click',function(){
-    twited = !twited;
+  $('#clouds').on('click',function(){ //setting dynamic twits
+    twited = !twited; //change a flag
     if(twited) {
-      twits++;
-      $('#clouds').css( 'color' , '#497DDD' );
+      twits++;  //twits rising
+      $('#clouds').css( 'color' , '#497DDD' ); //changing colour
     }
     else {
-      twits--;
-      $('#clouds').css( 'color' , '#6fadce' );
+      twits--;  //twits falling
+      $('#clouds').css( 'color' , '#6fadce' ); //changing colour back
     }
-    $('.twitscore').empty();
-    $('.twitscore').append(twits);
+    $('.twitscore').empty();  //clear old likes
+    $('.twitscore').append(twits);  //set new likes
   });
-
 });

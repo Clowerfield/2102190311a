@@ -47,6 +47,8 @@ body header .cstatus {
   border-width: 1px;
   border-color: #cecabf;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   padding: 7px 20px 7px 50px;
   margin-left: -40px;
 }
@@ -204,6 +206,8 @@ body main .said {
   font-size: 18px;
   font-weight: 500;
   border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
 }
 
 body footer {
@@ -226,6 +230,8 @@ body footer button {
   font-weight: bold;
   margin: 25px auto;
   border-radius: 110px 110px 110px 110px;
+  -webkit-border-radius: 110px 110px 110px 110px;
+  -moz-border-radius: 110px 110px 110px 110px;
   width: 70%;
   height: 50px;
   border: none;
