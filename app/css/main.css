@@ -1,0 +1,233 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 360px;
+  max-width: 720px;
+}
+
+body header {
+  display: flex;
+  flex-direction: row;
+  padding-right: 5px;
+}
+
+body header .cface {
+  background: url("../img/Face.png");
+  background-position: -84px -28px;
+  background-size: 180%;
+  width: 150px;
+  min-width: 150px;
+  height: 150px;
+  border-radius: 100px 100px 100px 100px;
+  -webkit-border-radius: 100px 100px 100px 100px;
+  -moz-border-radius: 100px 100px 100px 100px;
+  z-index: 1;
+}
+
+body header .cname {
+  font-family: Tahoma;
+  font-size: 21.5px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 550;
+  padding-left: 10px;
+}
+
+body header .cstatus {
+  font-family: "Arial";
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 550;
+  color: #333333;
+  background-color: #fffbc7;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cecabf;
+  border-radius: 4px;
+  padding: 7px 20px 7px 50px;
+  margin-left: -40px;
+}
+
+body header .cjobstate {
+  font-family: Tahoma;
+  font-size: 17px;
+  padding: 3px 0px 8px 12px;
+  font-style: normal;
+  font-variant: normal;
+  color: gray;
+}
+
+body .crate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+body .crate .cols {
+  display: block;
+  padding: 0% 6%;
+}
+
+body .crate .serv {
+  width: 71%;
+  border-bottom: solid #cecabf;
+  border-width: 0.5px;
+  font-family: "Arial";
+  font-size: 18px;
+  margin: 0px 16% 20px 26%;
+  padding: 0% 0% 6px 55%;
+  padding-right: 7%;
+  text-align: right;
+}
+
+body .crate .cscore {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  width: 100%;
+  margin: 0px 14% 0px 26%;
+}
+
+body .crate .cscore #cgistogram {
+  width: 55%;
+  text-align: left;
+  border-left: solid #cecabf;
+  border-width: 1px;
+}
+
+body .crate .cscore .numericscore {
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 17px;
+  padding: 0% 5%;
+  text-align: center;
+}
+
+body .crate .cscore .numericscore span {
+  margin: 5px 0px 2px 0px;
+}
+
+body .crate .atall {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 71%;
+  border-top: solid #cecabf;
+  border-width: 0.5px;
+  font-family: "Arial";
+  font-size: 20px;
+  margin: 20px 16% 0px 26%;
+  padding: 15px 5% 15px 0%;
+  text-align: right;
+  font-weight: 550;
+}
+
+body .crate {
+  text-align: center;
+}
+
+body .buttonbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+  min-width: 360px;
+  max-width: 720px;
+}
+
+body .buttonbar .totalcom {
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body .buttonbar .totalcom a {
+  font-family: "Tahoma";
+  font-weight: normal;
+  font-size: 18px;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+body .buttonbar .twit {
+  display: flex;
+  flex-direction: row;
+}
+
+body .buttonbar .twit a {
+  margin: 8px 10px;
+  text-decoration: none;
+  color: #6fadce;
+  transform: scale(-1, 1);
+}
+
+body .buttonbar .twit a :hover {
+  color: #154088;
+}
+
+body .buttonbar .twit a :visited {
+  color: #497DDD;
+}
+
+body main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+
+body main .uname {
+  margin: 0px 10px 0px 20px;
+  font-family: 'Arial';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body main .udate {
+  font-family: Tahoma;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  color: gray;
+}
+
+body main .said {
+  background-color: #f1fbff;
+  border: solid #cecabf 1px;
+  margin: 10px 20px;
+  padding: 14px;
+  font-family: 'Arial';
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 3px 3px 3px 3px;
+}
+
+body footer {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6px 0px 0px 0px;
+  padding: 20px;
+}
+
+body footer textarea {
+  margin-top: 15px;
+}
+
+body footer button {
+  font-family: 'PT Sans', sans-serif;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 25px auto;
+  border-radius: 110px 110px 110px 110px;
+  width: 70%;
+  height: 50px;
+  border: none;
+  background-color: #fcd539;
+}
