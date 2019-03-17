@@ -5,6 +5,7 @@ $( document ).ready(function() {
     var named = prompt("Введите имя коментатора", "Лилия Семеновна"); // Addition a users name
     if(named == null) named = 'Пользователь № '+ new Date().getMilliseconds();  // undefined users definition
     var texted = $('textarea').val(); // keeping text by user
+    if(texted == '') texted = '<Многозначное молчание>';  //silence must make a scene
     $('textarea').val('');  //  clearning an input field
     var monthed = new Date().toLocaleString('ru', {month: 'long'}); //getting a verbal presentation of mounth
     if(~monthed.indexOf("й") || ~monthed.indexOf("ь")){ // a mounth little changing
