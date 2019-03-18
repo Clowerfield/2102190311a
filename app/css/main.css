@@ -1,22 +1,22 @@
-body {
+html body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0px auto;
   min-width: 360px;
   max-width: 720px;
 }
 
-body header {
+html body header {
   display: flex;
   flex-direction: row;
   padding-right: 5px;
 }
 
-body header .cface {
+html body header .cface {
   background: url("../img/Face.png");
-  background-position: -84px -28px;
-  background-size: 180%;
+  background-position: -90px -33px;
+  background-size: 187%;
   width: 150px;
   min-width: 150px;
   height: 150px;
@@ -26,7 +26,7 @@ body header .cface {
   z-index: 1;
 }
 
-body header .cname {
+html body header .cname {
   font-family: Tahoma;
   font-size: 21.5px;
   font-style: normal;
@@ -35,7 +35,7 @@ body header .cname {
   padding-left: 10px;
 }
 
-body header .cstatus {
+html body header .cstatus {
   font-family: "Arial";
   font-size: 18px;
   font-style: normal;
@@ -53,7 +53,7 @@ body header .cstatus {
   margin-left: -40px;
 }
 
-body header .cjobstate {
+html body header .cjobstate {
   font-family: Tahoma;
   font-size: 17px;
   padding: 3px 0px 8px 12px;
@@ -62,18 +62,18 @@ body header .cjobstate {
   color: gray;
 }
 
-body .crate {
+html body .crate {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-body .crate .cols {
+html body .crate .cols {
   display: block;
   padding: 0% 6%;
 }
 
-body .crate .serv {
+html body .crate .serv {
   width: 71%;
   border-bottom: solid #cecabf;
   border-width: 0.5px;
@@ -81,26 +81,26 @@ body .crate .serv {
   font-size: 18px;
   margin: 0px 16% 20px 26%;
   padding: 0% 0% 6px 55%;
-  padding-right: 7%;
+  padding-right: 5.8%;
   text-align: right;
 }
 
-body .crate .cscore {
+html body .crate .cscore {
   display: flex;
   flex-direction: row;
   text-align: right;
-  width: 100%;
+  width: 70%;
   margin: 0px 14% 0px 26%;
 }
 
-body .crate .cscore #cgistogram {
-  width: 55%;
+html body .crate .cscore #cgistogram {
+  width: 79.7%;
   text-align: left;
   border-left: solid #cecabf;
   border-width: 1px;
 }
 
-body .crate .cscore .numericscore {
+html body .crate .cscore .numericscore {
   display: flex;
   flex-direction: column;
   font-family: "Arial";
@@ -110,11 +110,11 @@ body .crate .cscore .numericscore {
   text-align: center;
 }
 
-body .crate .cscore .numericscore span {
+html body .crate .cscore .numericscore span {
   margin: 5px 0px 2px 0px;
 }
 
-body .crate .atall {
+html body .crate .atall {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,11 +129,11 @@ body .crate .atall {
   font-weight: 550;
 }
 
-body .crate {
+html body .crate {
   text-align: center;
 }
 
-body .buttonbar {
+html body .buttonbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -142,13 +142,13 @@ body .buttonbar {
   max-width: 720px;
 }
 
-body .buttonbar .totalcom {
+html body .buttonbar .totalcom {
   font-family: "Arial";
   font-size: 20px;
   font-weight: bold;
 }
 
-body .buttonbar .totalcom a {
+html body .buttonbar .totalcom a {
   font-family: "Tahoma";
   font-weight: normal;
   font-size: 18px;
@@ -156,40 +156,55 @@ body .buttonbar .totalcom a {
   margin-left: 6px;
 }
 
-body .buttonbar .twit {
+html body .buttonbar .twit {
   display: flex;
   flex-direction: row;
 }
 
-body .buttonbar .twit a {
-  margin: 8px 10px;
+html body .buttonbar .twit a {
+  margin: 8px 5px 8px 25px;
   text-decoration: none;
   color: #6fadce;
   transform: scale(-1, 1);
 }
 
-body .buttonbar .twit a :hover {
+html body .buttonbar .twit a :hover {
   color: #154088;
 }
 
-body .buttonbar .twit a :visited {
+html body .buttonbar .twit a :visited {
   color: #497DDD;
 }
 
-body main {
+html body .buttonbar .twit div {
+  padding: 3px 0px 0px 0px;
+  font-family: "Arial Narrow";
+  font-size: 16px;
+}
+
+html body main {
   display: flex;
   flex-direction: column;
   padding: 10px 0px;
 }
 
-body main .uname {
+html body main .comment {
+  display: flex;
+  flex-direction: column;
+}
+
+html body main .comment .user {
+  z-index: 0;
+}
+
+html body main .comment .user .uname {
   margin: 0px 10px 0px 20px;
   font-family: 'Arial';
   font-size: 18px;
   font-weight: bold;
 }
 
-body main .udate {
+html body main .comment .user .udate {
   font-family: Tahoma;
   font-size: 14px;
   font-style: normal;
@@ -197,7 +212,38 @@ body main .udate {
   color: gray;
 }
 
-body main .said {
+html body main .comment .angler {
+  width: 0px;
+  box-shadow: none !important;
+  z-index: 1;
+  margin: 0px 25px -11px 50px;
+  background-color: transparent;
+  box-shadow: 0px 0px;
+}
+
+html body main .comment .angler .shadow {
+  width: 0px;
+  height: 0px;
+  background-color: transparent;
+  border-top: 11px solid transparent;
+  border-left: 12px solid #cecabf;
+  z-index: 1;
+  box-shadow: none !important;
+}
+
+html body main .comment .angler .front {
+  width: 0px;
+  height: 0px;
+  margin: -9px 0px 0px 1px;
+  background-color: transparent;
+  border-top: 9px solid transparent;
+  border-left: 9px solid #f1fbff;
+  z-index: 2;
+  box-shadow: none !important;
+}
+
+html body main .comment .said {
+  z-index: 0;
   background-color: #f1fbff;
   border: solid #cecabf 1px;
   margin: 10px 20px;
@@ -210,7 +256,7 @@ body main .said {
   -moz-border-radius: 3px 3px 3px 3px;
 }
 
-body footer {
+html body footer {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -219,11 +265,11 @@ body footer {
   padding: 20px;
 }
 
-body footer textarea {
+html body footer textarea {
   margin-top: 15px;
 }
 
-body footer button {
+html body footer button {
   font-family: 'PT Sans', sans-serif;
   color: #000000;
   font-size: 18px;

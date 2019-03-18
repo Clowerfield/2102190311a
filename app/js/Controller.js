@@ -21,9 +21,10 @@ $( document ).ready(function() {
     var timed = new Date().getDate() + ' ' + monthed + ' ' + new Date().getFullYear();  //keeping a full date
 
     $('main').append(   //inserting a structured data
-      "<div> <span class = 'uname'>" + named +
+      "<div class = 'comment'><div class ='user'> <span class = 'uname'>" + named +
       "</span> <span class = 'udate'>" + timed +
-      "</span> <div class = 'said'>" + texted +
+      "</span></div> <div class = 'angler'><div class = 'shadow'></div>" +
+      "<div class = 'front'></div></div><div class = 'said'>" + texted +
       "</div></div>"
     );
   });
