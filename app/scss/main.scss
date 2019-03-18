@@ -140,6 +140,9 @@ html{
 			.twit {
 				display:flex;
 				flex-direction: row;
+				#clouds{
+					transform: scale(-1,0.87);
+				}
 				a{
 					margin: 8px 5px 8px 25px;;
 					text-decoration: none;
@@ -151,6 +154,7 @@ html{
 					:visited{
 						color: #497DDD;
 					}
+
 				}
 				div{
 					padding: 3px 0px 0px 0px;
